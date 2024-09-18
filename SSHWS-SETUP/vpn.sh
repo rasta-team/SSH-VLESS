@@ -12,7 +12,7 @@ MYIP=$(curl -sS ifconfig.me )
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 ANU=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 domain=$(cat /root/domain)
-
+Server_URL="raw.githubusercontent.com/rasta-team/SSH-VLESS/main"
 # Install OpenVPN dan Easy-RSA
 apt install openvpn easy-rsa unzip -y
 apt install openssl iptables iptables-persistent -y
