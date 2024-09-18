@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/YoloNet/IP-Multiport-Websocket/main/access | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rasta-team/IP-Multiport-Websocket/main/access | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -18,7 +18,7 @@ IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/YoloNet/IP-Multiport-Websocket/main/access | grep $MYIP | awk '{print $2}')
+NameUser=$(curl -sS https://raw.githubusercontent.com/rasta-team/IP-Multiport-Websocket/main/access | grep $MYIP | awk '{print $2}')
 namaklien=$(cat /root/yoloautosc/clientname.conf)
 clear
 echo -e "[ ${green}INFO${NC} ] Create password for database"
@@ -43,7 +43,7 @@ zip -rP $InputPass $namaklien.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/YoloNet/user-manual-backup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/rasta-team/user-manual-backup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -69,8 +69,8 @@ Save_And_Exit () {
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/YoloNet/user-manual-backup
-    git push -f https://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@github.com/YoloNet/user-manual-backup.git &> /dev/null
+    git remote add origin https://github.com/rasta-team/user-manual-backup
+    git push -f https://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@github.com/rasta-team/user-manual-backup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -85,7 +85,7 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/YoloNet/user-manual-backup/main/$namaklien/$namaklien.zip"
+link="https://raw.githubusercontent.com/rasta-team/user-manual-backup/main/$namaklien/$namaklien.zip"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Backup done "
 sleep 1

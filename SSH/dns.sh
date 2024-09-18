@@ -207,7 +207,7 @@ proxylocation=$(cat /root/kontold/country.txt)
 
 # saving domainlist from github to .txt
 
-list=$(curl -sS https://raw.githubusercontent.com/YoloNet/custom-rules/main/list)
+list=$(curl -sS https://raw.githubusercontent.com/rasta-team/custom-rules/main/list)
 printf '%s\n' "$list" > /root/domains.txt
 #######
 # Define session ID and file name

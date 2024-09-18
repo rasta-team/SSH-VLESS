@@ -2,7 +2,10 @@
 #@authors: YoLoNET
 #TELEGRAM : @RAYYOLO
 #Script Auto Install xray
+#raw.githubusercontent.com/rasta-team/SSH-VLESS/main
+#wget https://github.com/rasta-team/${GitUser}
 
+Server_URL="raw.githubusercontent.com/rasta-team/SSH-VLESS/main"
 #colors
 red='\e[1;31m'
 green='\e[0;32m'
